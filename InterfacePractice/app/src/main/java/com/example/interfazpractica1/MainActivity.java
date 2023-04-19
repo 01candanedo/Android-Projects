@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     EditText txtNombre, txtDescripcion;
     CheckBox chkServ, chkCom, chkFar;
-    RadioGroup rbgViable, rgbTiposRedes;
-    Spinner spnPresupuesto;
+    RadioGroup rbgViable, rgbTiposEntretenimiento;
+    Spinner spnEntretenimiento;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +37,9 @@ public class MainActivity extends AppCompatActivity {
         chkFar = (CheckBox) findViewById(R.id.chkFarmacia);
 
         rbgViable = (RadioGroup) findViewById(R.id.rbgViable);
+        rgbTiposEntretenimiento = (RadioGroup)findViewById(R.id.rgbTipoEntretenimiento);
 
-        spnPresupuesto = (Spinner) findViewById(R.id.spnPresupuesto);
+        spnEntretenimiento = (Spinner) findViewById(R.id.spnPresupuesto);
     }
 
     public void InterfazPrincipal(View v){
@@ -84,40 +85,40 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void CargarSpinner(View view){
-        this.InicializarSpinner();
-    }
-
-    private List<String> ObtenerRedesSociales(){
-        List<String> redes = new ArrayList<String>();
-        redes.add("Twitch");
-        redes.add("You");
-        redes.add("Discord");
-        redes.add("Github");
-        redes.add("Gitlab");
-        return redes;
+        InicializarSpinner();
     }
 
     private void InicializarSpinner(){
-        ArrayAdapter<CharSequence> adapterPS5 = ArrayAdapter
-                .createFromResource(getApplicationContext(),R.array.juegosPS5, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapterAnime =
+                new ArrayAdapter<String>(getApplicationContext(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,this.GetAnime());
 
-        ArrayAdapter<CharSequence> adapterXBOX = ArrayAdapter
-                .createFromResource(getApplicationContext(),R.array.juegosXbox, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapterSeries = ArrayAdapter
+                .createFromResource(getApplicationContext(),R.array.datosSeries, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
 
-        ArrayAdapter<String> adapterRedes =
-                new ArrayAdapter<String>(getApplicationContext(),R.layout.support_simple_spinner_dropdown_item,this.ObtenerRedesSociales());
+        ArrayAdapter<CharSequence> adapterLudicos = ArrayAdapter
+                .createFromResource(getApplicationContext(),R.array.datosLudicos, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
 
-        switch (rgbTiposRedes.getCheckedRadioButtonId()){
-            case R.id.rbtSwitch:
-                spnPresupuesto.setAdapter(adapterRedes);
+        switch (rgbTiposEntretenimiento.getCheckedRadioButtonId()){
+            case R.id.rbtAnime:
+                spnEntretenimiento.setAdapter(adapterAnime);
                 break;
-            case R.id.rbtPS5:
-                spnJuegos.setAdapter(adapterPS5);
+            case R.id.rbtSeries:
+                spnEntretenimiento.setAdapter(adapterSeries);
                 break;
-            case R.id.rbtXbox:
-                spnJuegos.setAdapter(adapterXBOX);
+            case R.id.rbtLudicos:
+                spnEntretenimiento.setAdapter(adapterLudicos);
                 break;
         }
+    }
+
+    private List<String> GetAnime(){
+        List<String> anm = new ArrayList<String>();
+        anm.add("Tokyo Revengers");
+        anm.add("Kimetsu no Yaiba");
+        anm.add("One Piece");
+        anm.add("Hunter x Hunter");
+        anm.add("Evangelion");
+        return anm;
     }
 
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="datosLudicos">
+        <item>Twister</item>
+        <item>Scrabble</item>
+        <item>Monopoly</item>
+        <item>Jenga</item>
+        <item>Clue</item>
+    </string-array>
+</resources>

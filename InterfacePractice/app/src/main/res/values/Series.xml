@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="datosSeries">
+        <item>Stranger Things</item>
+        <item>Bridgerton</item>
+        <item>The Crown</item>
+        <item>Black Mirror</item>
+        <item>The Queens Gambit</item>
+    </string-array>
+</resources>

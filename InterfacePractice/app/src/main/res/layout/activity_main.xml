@@ -101,8 +101,37 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Presupuesto"
+        android:text="Tipos de Entretenimiento"
         android:textSize="25dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgbTipoEntretenimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rbtAnime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ANIME"/>
+        <RadioButton
+            android:id="@+id/rbtSeries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SERIES"/>
+        <RadioButton
+            android:id="@+id/rbtLudicos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LUDICOS"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Cargar Spinner"
+            android:textSize="25px"
+            android:layout_marginLeft="10px"
+            android:onClick="CargarSpinner"/>
+    </RadioGroup>
 
     <Spinner
         android:id="@+id/spnPresupuesto"
