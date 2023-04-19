@@ -99,17 +99,17 @@ public class MainActivity extends AppCompatActivity {
 
     private void InicializarSpinner(){
         ArrayAdapter<CharSequence> adapterPS5 = ArrayAdapter
-                .createFromResource(getApplicationContext(),R.array.juegosPS5,R.layout.support_simple_spinner_dropdown_item);
+                .createFromResource(getApplicationContext(),R.array.juegosPS5, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
 
         ArrayAdapter<CharSequence> adapterXBOX = ArrayAdapter
-                .createFromResource(getApplicationContext(),R.array.juegosXbox,R.layout.support_simple_spinner_dropdown_item);
+                .createFromResource(getApplicationContext(),R.array.juegosXbox, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
 
-        ArrayAdapter<String> adapterSwitch =
-                new ArrayAdapter<String>(getApplicationContext(),R.layout.support_simple_spinner_dropdown_item,this.ObtenerJuegos());
+        ArrayAdapter<String> adapterRedes =
+                new ArrayAdapter<String>(getApplicationContext(),R.layout.support_simple_spinner_dropdown_item,this.ObtenerRedesSociales());
 
         switch (rgbTiposRedes.getCheckedRadioButtonId()){
             case R.id.rbtSwitch:
-                spnJuegos.setAdapter(adapterSwitch);
+                spnPresupuesto.setAdapter(adapterRedes);
                 break;
             case R.id.rbtPS5:
                 spnJuegos.setAdapter(adapterPS5);
