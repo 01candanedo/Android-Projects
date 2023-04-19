@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Este es el titulo del App Plagiador"
+        android:textSize="35dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre del app"
+        android:textSize="25dp"
+        />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ejm. Pedidos Despues!"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descripcion"
+        android:textSize="25dp"
+        />
+
+    <EditText
+        android:id="@+id/txtDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ejm. Este es un app que va a reemplazar a Pedidos Ya, ya veras!"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Servicios"
+        android:textSize="25dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/chkMensaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mensajeria"/>
+        <CheckBox
+            android:id="@+id/chkComida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comida"/>
+        <CheckBox
+            android:id="@+id/chkFarmacia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Farmacia"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Es viable?"
+        android:textSize="25dp"/>
+
+    <RadioGroup
+        android:id="@+id/rbgViable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbtViableSi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SI"/>
+
+        <RadioButton
+            android:id="@+id/rbtViableNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NO"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Presupuesto"
+        android:textSize="25dp"/>
+
+    <Spinner
+        android:id="@+id/spnPresupuesto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GUARDAR DATOS!"
+        android:onClick="InterfazPrincipal"/>
+
+</LinearLayout>

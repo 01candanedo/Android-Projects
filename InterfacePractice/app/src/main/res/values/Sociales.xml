@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="RedesSociales">
+    <item>Instagram</item>
+    <item>Youtube</item>
+    <item>Facebook</item>
+    <item>Twitter</item>
+    <item>Pinterest</item>
+</string-array>
+</resources>
