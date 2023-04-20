@@ -1,4 +1,4 @@
-package com.example.interfazpractica1;
+package com.example.interfazpractica1.Helpers;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
