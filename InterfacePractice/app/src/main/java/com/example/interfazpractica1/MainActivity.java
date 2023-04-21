@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
             String descripcion = txtDescripcion.getText().toString();
             String servicios = ObtenerCheckbox();
             String viable = "";
-
             switch(rbgViable.getCheckedRadioButtonId()){
                 case R.id.rbtViableSi:
                     viable = "Si";
@@ -70,20 +69,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String ObtenerCheckbox(){
-        String seleccion = "";
-
+        String seleccion = "";git config --global --add safe.directory E:/RAZ
         if(chkServ.isChecked()){
             seleccion += chkServ.getText().toString()+", ";
         }
-
         if(chkFar.isChecked()){
             seleccion += chkFar.getText().toString()+", ";
         }
-
         if(chkCom.isChecked()){
             seleccion += chkCom.getText().toString()+", ";
         }
-
         return seleccion;
     }
 
