@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DBDBDB"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="0dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/ordernow"
+            app:shapeAppearanceOverlay="@style/bottom_rounded_corner" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginTop="150px"
+            android:layout_marginLeft="70px"
+            android:layout_marginRight="70px"
+            android:paddingTop="30px"
+            android:paddingBottom="30px"
+            android:textColor="#000"
+            android:background="@drawable/search_txt_background"
+            app:queryHint="Search Here"
+            app:iconifiedByDefault="false"
+            app:searchIcon="@drawable/ic_search"
+            app:closeIcon="@null"
+            app:queryBackground="@null"
+            app:submitBackground="@null"
+            app:goIcon="@null"
+            app:searchHintIcon="@null"
+            app:voiceIcon="@null"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25px"
+        android:gravity="center"
+        android:textSize="60px"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:text="Fast Food"
+        android:textColor="#2E2E2E"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="35px"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:text="Only today this fast food offer"
+        android:textColor="#737373"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$5.00"
+        android:textColor="#FF5722"
+        android:layout_gravity="center_horizontal"
+        style="@style/MiEstiloBoton"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="30px"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor lobortis est, sit amet faucibus velit. Aliquam erat volutpat."
+        android:textAlignment="center"
+        android:textColor="#737373"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF5722"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:text="ORDER NOW"/>
+
+</LinearLayout>
