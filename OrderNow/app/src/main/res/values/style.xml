@@ -9,13 +9,26 @@
         <item name="cornerSizeTopLeft">0dp</item>
     </style>
 
-    <style name="MiEstiloBoton" parent="Widget.AppCompat.Button">
-        <item name="android:textColor">#272727</item>
-
-        <item name="android:textSize">16sp</item>
-        <item name="android:backgroundTint">#FFFFFF</item>
-        <item name="strokeColor">#FF1616</item>
-        <item name="strokeWidth">10px</item>
-
+    <style name="PriceStyle" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">#FF5722</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:text">$5.00</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/pricebtn</item>
+        <item name="android:theme">@style/NoHighlightTheme</item>
     </style>
+
+    <style name="OrderNowStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/ordernowbtn</item>
+        <item name="android:textColor">#F3F3F3</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:theme">@style/NoHighlightTheme</item>
+    </style>
+
+    <style name="NoHighlightTheme">
+        <item name="selectableItemBackground">@android:color/transparent</item>
+    </style>
+
 </resources>

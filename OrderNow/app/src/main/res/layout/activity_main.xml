@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DBDBDB"
+    android:background="#F3F3F3"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -19,7 +19,7 @@
             android:adjustViewBounds="true"
             android:layout_marginTop="0dp"
             android:scaleType="fitStart"
-            android:src="@drawable/ordernow"
+            android:src="@drawable/raspberries"
             app:shapeAppearanceOverlay="@style/bottom_rounded_corner" />
 
         <androidx.appcompat.widget.SearchView
@@ -29,30 +29,30 @@
             android:layout_marginTop="150px"
             android:layout_marginLeft="70px"
             android:layout_marginRight="70px"
-            android:paddingTop="30px"
-            android:paddingBottom="30px"
-            android:textColor="#000"
+            android:paddingTop="25px"
+            android:paddingBottom="25px"
+            android:textColor="#2E2E2E"
             android:background="@drawable/search_txt_background"
             app:queryHint="Search Here"
             app:iconifiedByDefault="false"
             app:searchIcon="@drawable/ic_search"
-            app:closeIcon="@null"
-            app:queryBackground="@null"
-            app:submitBackground="@null"
-            app:goIcon="@null"
-            app:searchHintIcon="@null"
-            app:voiceIcon="@null"
             app:layout_constraintTop_toTopOf="parent"/>
     </RelativeLayout>
+
+    <View
+        android:layout_width="37dp"
+        android:layout_height="7dp"
+        android:layout_marginTop="20px"
+        android:layout_gravity="center"
+        android:background="#FF490F"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25px"
+        android:layout_marginTop="40px"
         android:gravity="center"
-        android:textSize="60px"
+        android:textSize="75px"
         android:textStyle="bold"
-        android:fontFamily="serif"
         android:text="Fast Food"
         android:textColor="#2E2E2E"
         />
@@ -60,42 +60,39 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
         android:gravity="center"
         android:textSize="35px"
-        android:textStyle="bold"
-        android:fontFamily="serif"
         android:text="Only today this fast food offer"
         android:textColor="#737373"
         />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="$5.00"
-        android:textColor="#FF5722"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="105dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="30px"
         android:layout_gravity="center_horizontal"
-        style="@style/MiEstiloBoton"
+        style="@style/PriceStyle"
         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="45px"
         android:gravity="center"
         android:textSize="30px"
-        android:textStyle="bold"
-        android:fontFamily="serif"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor lobortis est, sit amet faucibus velit. Aliquam erat volutpat."
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor lobortis est, sit amet faucibus velit. Aliquam erat volutpat. dolor sit amet, consectetur adipiscing elit. Nullam auctor lobortis est,"
         android:textAlignment="center"
         android:textColor="#737373"
         />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FF5722"
-        android:layout_marginTop="20px"
-        android:layout_marginLeft="40px"
-        android:layout_marginRight="40px"
-        android:text="ORDER NOW"/>
+        style="@style/OrderNowStyle"
+        android:layout_marginTop="50px"
+        android:layout_marginLeft="80px"
+        android:layout_marginRight="80px"
+        android:text="Order Now"/>
 
 </LinearLayout>
