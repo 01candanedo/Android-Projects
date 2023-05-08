@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lblTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Este es otro Nivel"
+                android:gravity="center"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/txtValor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblTitulo"
+                android:inputType="number"
+                android:hint="Introduzca valor"
+                />
+
+            <RelativeLayout
+                android:id="@+id/group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@id/txtValor">
+
+                <Button
+                    android:id="@+id/btnSetear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Setear"
+                    android:onClick="SetButton"/>
+
+                <Button
+                    android:id="@+id/btnLimpiar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/btnSetear"
+                    android:text="Limpiar"
+                    android:onClick="ResetButton"/>
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/myBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/group"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="0"
+                />
+
+            <DatePicker
+                android:id="@+id/date_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:spinnersShown="true"
+                android:startYear="2000"
+                android:endYear="2100"
+                android:maxDate="12/31/2100"
+                android:minDate="01/01/2000"
+                android:layout_below="@+id/myBar"
+                />
+
+            <TimePicker
+                android:id="@+id/time_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/date_picker"
+                android:timePickerMode="clock"
+                android:headerBackground="#4CAF50"/>
+
+            <TextView
+                android:id="@+id/txtResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/time_picker"
+                android:layout_margin="100px"
+                android:textSize="50px"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
