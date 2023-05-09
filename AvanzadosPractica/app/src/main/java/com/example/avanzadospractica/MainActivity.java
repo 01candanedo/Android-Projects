@@ -23,7 +23,6 @@ import java.util.Date;
 public class MainActivity extends AppCompatActivity {
 
     ProgressBar myProgressBar;
-    ValueAnimator animator;
     DatePicker datePicker;
     TimePicker timePicker;
     EditText value;
@@ -35,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         InitControls();
+        LoadDateTimePickers();
     }
 
     private void InitControls(){
@@ -43,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
         timePicker = (TimePicker) findViewById(R.id.time_picker);
         value = (EditText) findViewById(R.id.txtValor);
         result = (TextView) findViewById(R.id.txtResult);
+    }
+
+    private void LoadDateTimePickers(){
+
+
     }
 
     public void SetButton(View v){
@@ -61,14 +66,14 @@ public class MainActivity extends AppCompatActivity {
            int minute = timePicker.getMinute();
            if((x>=0 && x <=100)){
                try {
-                   new CountDownTimer(10000, 1){
+                   new CountDownTimer(20000, 1){
                        int newProgress = 0;
                        @Override
                        public void onTick(long millisUntilFinished) {
                            if (newProgress == x) {
                                onFinish();
                            } else {
-                               myProgressBar.setProgress(newProgress);
+                               myProgressBar.setProgress(newProgress+1);
                                newProgress++;
                            }
                        }
